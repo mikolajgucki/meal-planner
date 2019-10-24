@@ -1,0 +1,27 @@
+$product-selector-border-size: 1px;
+
+.product-selector {
+    position: relative;
+    width: 100%;
+
+    .text-field {
+        width: 100%;
+    }
+
+    .product-selector-products {
+        border: $product-selector-border-size solid $light-gray;
+        border-radius: 0.25rem;
+        position: absolute;
+        background: white;
+        top: 2.125rem;
+        width: calc(100% - 2 * #{$product-selector-border-size});
+    }
+}
+
+@include desktop() {
+    .product-selector {
+        .product-selector-products {
+            width: 200%;
+        }
+    }
+}

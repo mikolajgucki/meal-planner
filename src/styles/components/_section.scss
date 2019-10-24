@@ -1,0 +1,14 @@
+.section {
+    $section-left-padding: 1rem;
+
+    .section-title {
+        width: calc(100% - #{$section-left-padding});
+        padding-left: $section-left-padding;
+        margin-top: 1rem;
+        border-bottom: 1px solid $light-gray;
+    }
+
+    .section-content {
+        padding: 1rem;
+    }
+}

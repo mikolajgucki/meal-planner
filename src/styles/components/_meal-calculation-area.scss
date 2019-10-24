@@ -1,0 +1,74 @@
+.meal-calculation-area {
+    $ingredient-gap: 0.25rem;
+    width: 100%;
+
+    .meal-calculation-error {
+        color: $red;
+    }
+
+    .meal-calculation-ingredient {
+        display: flex;
+    }
+
+    .meal-calculation-separator {
+        width: 12rem;
+        border-bottom: 1px solid $light-gray;
+        padding-top: $ingredient-gap;
+        margin-bottom: $ingredient-gap;
+        margin-left: 2rem;
+    }
+
+    .meal-calculation-warning {
+        font-size: 75%;
+        color: $red;
+    }
+
+    .meal-calculation-fact {
+        font-size: 75%;
+    }
+
+    .meal-calculation-warning .meal-calculation-unit {
+        color: $light-red;
+    }
+
+    .meal-calculation-ingredient-amount {
+        flex-grow: 0;
+        flex-shrink: 1;
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        margin-right: $ingredient-gap;
+        width: 4rem;
+    }
+
+    .meal-calculation-ingredient-value {
+        flex-grow: 0;
+        flex-shrink: 1;
+        width: 3rem;
+    }
+
+    .meal-calculation-ingredient-unit {
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: 1rem;
+        text-align: left;
+        color: $gray;
+        padding-left: 0.15rem;
+    }
+
+    .meal-calculation-ingredient-name {
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-align: left;
+        margin-left: $ingredient-gap;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    @include desktop() {
+        .meal-calculation-ingredient-amount {
+            width: 6rem;
+        }
+    }
+}

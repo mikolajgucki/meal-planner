@@ -1,0 +1,57 @@
+$input-border-size: 1px;
+$input-padding: 0.25rem;
+$input-border-radius: 0.25rem;
+
+@mixin input() {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    border: solid $input-border-size $light-gray;
+    border-bottom: solid $input-border-size $gray;
+    border-radius: $input-border-radius;
+    padding: $input-padding;
+    outline: none;
+}
+
+@mixin input-focus() {
+    border-color: $light-blue;
+    border-bottom-color: $blue;
+}
+
+@mixin input-error {
+    color: $red;
+    border-bottom-color: $red;
+}
+
+@mixin input-error-focus {
+    color: $red;
+    border-color: $light-red;
+    border-bottom-color: $red;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    color: $dark-gray;
+}
+
+input {
+    @include input();
+    &:focus {
+        @include input-focus();
+    }
+}
+
+textarea {
+    @include input();
+    &:focus {
+        @include input-focus();
+    }
+}
+
+@include desktop() {
+    body {
+        width: 56rem;
+    }
+}

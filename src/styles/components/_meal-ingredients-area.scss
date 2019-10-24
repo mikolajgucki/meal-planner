@@ -1,0 +1,13 @@
+.meal-ingredients-area {
+    position: relative;
+
+    .text-area {
+        width: 100%;
+
+        .text-area-input {
+            width: calc(100% - 2 * #{$input-padding} - 2 * #{$input-border-size});
+            height: 8rem;
+            resize: vertical;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.meal {
+    .meal-energy {
+        padding-bottom: 0.25rem;
+    }
+
+    .meal-header {
+        display: flex;
+    }
+
+    .meal-header-label {
+        flex-grow: 1;
+    }
+
+    .meal-select-product {
+        justify-self: flex-end;
+        align-self: center;
+        width: 1rem;
+        height: 1rem;
+        display: none;
+    }
+
+    .meal-select-product-mobile {
+        display: inline;
+    }
+
+    .meal-areas {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .meal-ingredients {
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .meal-calculation {
+        width: 100%;
+        flex-grow: 1;
+    }
+}
+
+@include desktop() {
+    .meal {
+        .meal-areas {
+            flex-direction: unset;
+        }
+
+        .meal-ingredients {
+            margin-right: 0.5rem;
+        }
+
+        .meal-calculation {
+            margin-left: 0.5rem;
+        }
+    }
+}

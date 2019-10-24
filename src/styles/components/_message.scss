@@ -1,0 +1,48 @@
+.message {
+    $message-horizontal-padding: 1rem;
+
+    width: calc(100% - 2 * #{$message-horizontal-padding});
+    border-radius: 0.25rem;
+    padding: 0.25rem $message-horizontal-padding;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+
+    .message-close-image {
+        flex-grow: 0;
+        flex-shrink: 1;
+        width: 1rem;
+        height: 1rem;
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+    .message-text {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+}
+
+.message-info {
+    color: #004085;
+    background-color: #cce5ff;
+    border: solid 1px #b8daff;
+
+    .message-close-image {
+        background: url(img/close-info.png) no-repeat;
+        background-size: 0.75rem;
+        background-position: center;
+    }
+}
+
+.message-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: solid 1px #f5c6cb;
+
+    .message-close-image {
+        background: url(img/close-error.png) no-repeat;
+        background-size: 0.75rem;
+        background-position: center;
+    }
+}

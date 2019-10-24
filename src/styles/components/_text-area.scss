@@ -1,0 +1,9 @@
+.text-area.text-area-error {
+    .text-area-input {
+        @include input-error();
+    }
+
+    .text-area-input:focus {
+        @include input-error-focus();
+    }
+}

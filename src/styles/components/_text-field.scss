@@ -1,0 +1,20 @@
+.text-field {
+    .text-field-input {
+        @include input();
+        width: 100%;
+    }
+
+    .text-field-input:focus {
+        @include input-focus();
+    }
+}
+
+.text-field.text-field-error {
+    .text-field-input {
+        @include input-error();
+    }
+
+    .text-field-input:focus {
+        @include input-error-focus();
+    }    
+}

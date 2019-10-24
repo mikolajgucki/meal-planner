@@ -1,0 +1,47 @@
+.floating-product-selector {
+    $padding: 0.5rem;
+    $left: 0.5rem;
+
+    .product-selector-box {
+        position: fixed;
+        top: 0.5rem;
+        left: $left;
+        width: calc(100% - 2 * #{$padding} - 2 * #{$left});
+        background: white;
+        border: solid 1px $light-gray;
+        border-radius: 0.25rem;
+        padding: $padding;
+        z-index: 1;
+    }
+
+    .text-field-input {
+        width: calc(100% - 2 * #{$input-padding} - 2 * #{$input-border-size});
+    }
+
+    .floating-product-selector-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        opacity: 0.75;
+    }
+
+    @include desktop() {
+        .product-selector-box {
+            position: absolute;
+            width: calc(100% - 2 * #{$padding} - 2 * #{$product-selector-border-size});
+            top: unset;
+            left: unset;
+        }
+
+        .floating-product-selector-mask {
+            opacity: 0;
+        }
+    }
+}
+
+.floating-product-selector-hidden {
+    display: none;
+}

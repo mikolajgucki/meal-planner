@@ -1,0 +1,14 @@
+.meal-energy {
+    display: flex;
+    align-items: center;
+
+    .meal-energy-label {
+        flex-grow: 0;
+        margin-right: 0.5rem;
+    }
+
+    .text-field {
+        flex-grow: 0;
+        width: 6rem;
+    }
+}
