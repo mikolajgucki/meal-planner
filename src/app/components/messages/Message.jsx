@@ -22,11 +22,12 @@ export default class Message extends React.Component {
             `message-${this.props.type}`);
         return (
             <div className={messageClassNames}>
-                <div className="message-text">
-                    {this.props.text}
-                </div>
                 <div className="message-close-image"
                     onClick={this.onCloseClick}>
+                </div>
+                <div className="message-text"
+                    onClick={this.onCloseClick}>
+                    {this.props.text}
                 </div>
             </div>
         );

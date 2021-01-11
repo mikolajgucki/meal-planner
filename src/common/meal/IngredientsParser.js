@@ -116,7 +116,7 @@ class IngredientsParser {
             let amount = IngredientsParser.parseAmountExpression(
                 lastToken,lineNo);
 
-        // name + ingredient
+        // name + amount
             const ingredient = { name, ...amount };
             ingredients.push(ingredient);
             lineNo++;

@@ -1,8 +1,13 @@
 import React from 'react';
-import { findDOMNode } from 'react-dom';
-import IngredientsParser from '../../meal/IngredientsParser';
+import IngredientsParser from '../../../common/meal/IngredientsParser';
+import ProductsDB from '../../db/ProductsDB';
 import TextArea from '../TextArea';
-import FloatingProductSelector from '../FloatingProductSelector';
+import FloatingItemSelector from '../item-selector/FloatingItemSelector';
+
+/** */
+const translations = {
+    'select.product': 'Select product:'
+}
 
 /** */
 function updateCursorAndLines(self) {
@@ -15,12 +20,12 @@ function updateCursorAndLines(self) {
 }
 
 /** */
-function showFloatingProductSelector(self) {
+function showFloatingItemSelector(self) {
     let name = '';
     if (self.state.parsedLine) {
         name = self.state.parsedLine.name;
     }
-    self.floatingProductSelectorRef.current.show(name);
+    self.floatingItemSelectorRef.current.show(name);
 }
 
 /** */
@@ -45,6 +50,18 @@ function productSelected(self,productName) {
 }
 
 /** */
+function searchProducts(searchValue) {
+    return ProductsDB.matchByName(searchValue).map(product => {
+        return {
+            name: product.name,
+            details: product.energyPer100 + 'kcal',
+            matches: product.matches,
+            searchValue
+        }
+    });
+}
+
+/** */
 export default class MealIngredientsArea extends React.Component {
     /** */
     constructor(props) {
@@ -56,7 +73,7 @@ export default class MealIngredientsArea extends React.Component {
         };
 
         this.textAreaRef = React.createRef();
-        this.floatingProductSelectorRef = React.createRef();
+        this.floatingItemSelectorRef = React.createRef();
 
         this.onValueChange = this.onValueChange.bind(this);
         this.onKeyUp = this.onKeyUp.bind(this);
@@ -68,13 +85,18 @@ export default class MealIngredientsArea extends React.Component {
     }
 
     /** */
+    translate(key) {
+        return translations[key] ? translations[key] : key;
+    }
+    
+    /** */
     focus() {
         this.textAreaRef.current.focus();
     }
 
     /** */
-    showProductSelector() {
-        showFloatingProductSelector(this);
+    showItemSelector() {
+        showFloatingItemSelector(this);
     }
 
     /** */
@@ -96,7 +118,7 @@ export default class MealIngredientsArea extends React.Component {
     onKeyUp(event) {
     // ctrl + space
         if (event.keyCode === 32 && event.ctrlKey === true) {
-            showFloatingProductSelector(this);
+            showFloatingItemSelector(this);
             return;
         }
         updateCursorAndLines(this);
@@ -106,7 +128,7 @@ export default class MealIngredientsArea extends React.Component {
     onKeyPress(event) {
     // ctrl + enter
         if (event.charCode === 13 && event.ctrlKey === true) {
-            showFloatingProductSelector(this);
+            showFloatingItemSelector(this);
             return;
         }
     }
@@ -154,11 +176,13 @@ export default class MealIngredientsArea extends React.Component {
                     onKeyUp={this.onKeyUp}
                     onKeyPress={this.onKeyPress}
                     onClick={this.onClick}/>
-                <FloatingProductSelector
-                    ref={this.floatingProductSelectorRef}
+                <FloatingItemSelector
+                    ref={this.floatingItemSelectorRef}
+                    title={this.translate('select.product')}
+                    matchByName={searchProducts}
                     onCancel={this.onProductSelectCancel}
-                    onProductSelect={this.onProductSelect}
-                    onProductNameSelect={this.onProductNameSelect}/>
+                    onItemSelect={this.onProductSelect}
+                    onItemNameSelect={this.onProductNameSelect}/>
             </div>
         );
     }

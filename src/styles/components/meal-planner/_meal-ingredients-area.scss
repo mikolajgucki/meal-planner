@@ -11,3 +11,13 @@
         }
     }
 }
+
+@include desktop() {
+    .meal-ingredients-area {
+        .item-selector {
+            .item-selector-items {
+                width: 200%;
+            }
+        }
+    }
+}

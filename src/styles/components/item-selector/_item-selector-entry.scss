@@ -1,0 +1,15 @@
+.item-selector-item {
+    cursor: default;
+
+    .item-selector-item-name {
+        padding: 0.25rem;
+    }
+
+    .item-selector-item-details {
+        color: $gray;
+    }
+}
+
+.item-selector-item-selected {
+    background: $selection-gray;
+}

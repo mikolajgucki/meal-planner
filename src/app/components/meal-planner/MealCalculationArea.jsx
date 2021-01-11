@@ -47,14 +47,6 @@ function renderSummaryEntry(amount,unit,name,className) {
 }
 
 /** */
-function renderFact(name,value) {
-    return (
-        <div>
-        </div>
-    );
-}
-
-/** */
 function renderMeal(self) {
     const meal = self.state.meal;
     if (!meal) {
@@ -81,15 +73,11 @@ function renderMeal(self) {
 // energy
     const energyDiff = Math.round(meal.energy - meal.plannedEnergy);
     if (energyDiff < -25) {
-        const energyWarning = `${-energyDiff}kcal` +
-            ` ${self.translate('less.than.planned')}`;
         const energyStr = (-energyDiff).toString();
         summary.push(renderSummaryEntry(energyStr,'kcal',
             self.translate('less.than.planned'),'meal-calculation-warning'));
     }
     if (energyDiff > 25) {
-        const energyWarning = `${-energyDiff}kcal` +
-            ` ${self.translate('more.than.planned')}`;
         const energyStr = energyDiff.toString();
         summary.push(renderSummaryEntry(energyStr,'kcal',
             self.translate('more.than.planned'),'meal-calculation-warning'));

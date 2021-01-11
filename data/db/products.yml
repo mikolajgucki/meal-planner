@@ -1,0 +1,1067 @@
+- name:
+    en: Rolled oats
+    pl: Płatki owsiane
+  unit: g
+  energy: 379
+  fat: 6.52
+  carbs: 67.7
+  sugars: 0.99
+  protein: 13.15
+- name:
+    en: Raisins
+    pl: Rodzynki
+  unit: g
+  energy: 299
+  fat: 0.46
+  carbs: 79.18
+  sugars: 59.19
+  protein: 3.07
+- name:
+    en: Dried apricot
+    pl: Suszona morela
+  unit: g
+  energy: 284
+  fat: 1.2
+  carbs: 72.2
+  sugars: 59.19
+  protein: 5.4
+- name:
+    en: Walnuts
+    pl: Orzechy włoskie
+  unit: g
+  energy: 654
+  fat: 65.21
+  carbs: 13.71
+  sugars: 2.61
+  protein: 15.23
+- name:
+    en: Hazelnuts
+    pl: Orzechy laskowe
+  unit: g
+  energy: 628
+  fat: 61
+  carbs: 17
+  sugars: 4.3
+  protein: 15
+- name:
+    en: Sunflower seeds
+    pl: Nasiona słonecznika
+  unit: g
+  energy: 584
+  fat: 51.46
+  carbs: 20
+  sugars: 2.62
+  protein: 20.78
+- name:
+    en: Canned red beans
+    pl: Czerwona fasola z puszki
+  unit: g
+  energy: 112.6
+  fat: 0.2
+  carbs: 16.1
+  sugars: 1.2
+  protein: 9.2
+- name:
+    en: Canned red beans
+    pl: Czerwona fasola z puszki
+  producer: Nasza Spizarnia
+  unit: g
+  energy: 101
+  fat: 0.6
+  carbs: 12
+  sugars: 1
+  protein: 8.1
+- name:
+    en: Canned corn
+    pl: Kukurydza z puszki
+  unit: g
+  energy: 80
+  fat: 1.9
+  carbs: 10.8
+  sugars: 5.2
+  protein: 2.9
+- name:
+    en: Canned greenpeas
+    pl: Groszek z puszki
+  unit: g
+  energy: 73
+  fat: 0.7
+  carbs: 7.4
+  sugars: 2.6
+  protein: 5.5
+- name:
+    en: Fresh greenpeas
+    pl: Groszek świeży
+  unit: g
+  energy: 42
+  fat: 0.2
+  carbs: 7.5
+  sugars: 4
+  protein: 2.8
+- name:
+    en: Canned chickpeas
+    pl: Ciecierzyca z puszki
+  unit: g
+  energy: 117
+  fat: 2.1
+  carbs: 15.2
+  sugars: 0.6
+  protein: 7.1
+- name:
+    en: Fresh mango
+    pl: Mango świeże
+  unit: g
+  energy: 60
+  fat: 0.4
+  carbs: 15
+  sugars: 13.7
+  protein: 0.8
+- name:
+    en: Cottage cheese light
+    pl: Serek wiejski lekki
+  producer: Piatnica
+  unit: g
+  energy: 81
+  fat: 3
+  carbs: 2.4
+  sugars: 2
+  protein: 11
+- name:
+    en: Cottage cheese light
+    pl: Serek wiejski lekki
+  producer: Delikate
+  unit: g
+  energy: 85
+  fat: 3
+  carbs: 2.5
+  sugars: 2.5
+  protein: 17
+- name:
+    en: Ricotta cheese
+    pl: Ser ricotta
+  producer: Ceko
+  unit: g
+  energy: 151
+  fat: 11
+  carbs: 3.3
+  sugars: 3.3
+  protein: 9.7
+- name:
+    en: Halloumi cheese
+    pl: Ser halumi
+  producer: Eridanous
+  unit: g
+  energy: 319
+  fat: 25
+  carbs: 1.5
+  sugars: 1.5
+  protein: 22
+- name:
+    en: Rye bread
+    pl: Chleb żytni
+  unit: g
+  energy: 259
+  fat: 3.3
+  carbs: 48
+  sugars: 3.9
+  protein: 9
+- name:
+    en: Coconut shreds
+    pl: Wiórki kokosowe
+  unit: g
+  energy: 674
+  fat: 65
+  carbs: 7.4
+  sugars: 7.4
+  protein: 6.9
+- name:
+    en: Coconut milk light
+    pl: Mleczko kokosowe lekkie
+  producer: Thai Coco
+  unit: ml
+  energy: 76
+  fat: 6.5
+  carbs: 3.9
+  sugars: 0.9
+  protein: 0.5
+- name:
+    en: Coconut milk
+    pl: Mleczko kokosowe
+  producer: Thai Coco
+  unit: ml
+  energy: 178
+  fat: 18.2
+  carbs: 2.5
+  sugars: 2.4
+  protein: 0.9
+- name:
+    en: Coconut milk
+    pl: Mleczko kokosowe
+  producer: Real Thai
+  unit: ml
+  energy: 185
+  fat: 19
+  carbs: 2
+  sugars: 2
+  protein: 1.6
+- name:
+    en: Sesame seeds
+    pl: Nasiona sezamu
+  unit: g
+  energy: 573
+  fat: 50
+  carbs: 23
+  sugars: 0.3
+  protein: 18
+- name:
+    en: Protein bar
+    pl: Baton proteinowy
+  producer: Olimp nutrition
+  unit: g
+  energy: 323
+  fat: 10.3
+  carbs: 25.6
+  sugars: 3.8
+  protein: 32.9
+- name:
+    en: Banana protein bar
+    pl: Bananowy baton proteinowy
+  producer: Booster
+  unit: g
+  energy: 492
+  fat: 28.4
+  carbs: 36.65
+  sugars: 28.7
+  protein: 21
+- name:
+    en: Marzipan protein bar
+    pl: Marcepanowy baton proteinowy
+  producer: Booster
+  unit: g
+  energy: 507
+  fat: 26.94
+  carbs: 42.08
+  sugars: 28.28
+  protein: 21
+- name:
+    en: Iso Whey Zero protein
+    pl: Białko Iso Whey Zero
+  producer: Biotech
+  unit: g
+  energy: 377
+  fat: 1.9
+  carbs: 1.9
+  sugars: 1.8
+  protein: 88
+- name:
+    en: Canned tuna
+    pl: Tuńczk z puszki
+  unit: g
+  energy: 80
+  fat: 1.1
+  carbs: 5.6
+  sugars: 4.5
+  protein: 11.6
+- name:
+    en: Ginger
+    pl: Imbir
+  unit: g
+  energy: 80
+  fat: 0.7
+  carbs: 17.8
+  sugars: 1.7
+  protein: 1.8
+- name:
+    en: Whole-grain wheat pasta
+    pl: Makaron pszenny pełnoziarnisty
+  unit: g
+  energy: 345
+  fat: 2.1
+  carbs: 64
+  sugars: 3.8
+  protein: 13
+- name:
+    en: Rice pasta
+    pl: Makaraon ryżowy
+  producer: House of Asia
+  unit: g
+  energy: 368
+  fat: 0.8
+  carbs: 88.6
+  sugars: 4
+  protein: 1.6
+- name:
+    en: Groats pasta
+    pl: Makaron gryczany
+  producer: Premium
+  unit: g
+  energy: 188
+  fat: 1.6
+  carbs: 34
+  sugars: 0.2
+  protein: 6.6
+- name:
+    en: Yoghurt 3% lactose free
+    pl: Jogurt 3% bez laktozy
+  producer: Pilos
+  unit: ml
+  energy: 73
+  fat: 3
+  carbs: 6.5
+  sugars: 6.5
+  protein: 4.9
+- name:
+    en: Natural yoghurt 4.5%
+    pl: Jogurt naturalny 4,5%
+  producer: Jana
+  unit: m
+  energy: 87
+  fat: 4.5
+  carbs: 6.9
+  sugars: 6.9
+  protein: 4.7
+- name:
+    en: Natural yoghurt 2.8%
+    pl: Jogurt naturalny 2,8%
+  producer: Bakoma
+  unit: g
+  energy: 253
+  fat: 2.8
+  carbs: 5.2
+  sugars: 5.2
+  protein: 3.6
+- name:
+    en: Natural yoghurt 0%
+    pl: Jogurt naturalny 0%
+  producer: Jovi
+  unit: ml
+  energy: 49
+  fat: 0.2
+  carbs: 6.7
+  sugars: 6.7
+  protein: 5.2
+- name:
+    en: Fresh apricot
+    pl: Morela świeża
+  unit: g
+  energy: 48
+  fat: 0.4
+  carbs: 11.1
+  sugars: 9.2
+  protein: 1.4
+- name:
+    en: Rice flakes
+    pl: Płatki ryżowe
+  producer: Vita Natura
+  unit: g
+  energy: 360
+  fat: 0.7
+  carbs: 77
+  sugars: 0.5
+  protein: 6.7
+- name:
+    en: Rye flakes
+    pl: Płatki żytnie
+  producer: Milzu
+  unit: g
+  energy: 347.8
+  fat: 2.8
+  carbs: 71.1
+  sugars: 0.9
+  protein: 9.6
+- name:
+    en: Rye choco balls
+    pl: Żytnie kulki czekoladowe
+  producer: Milzu
+  unit: g
+  energy: 341.7
+  fat: 2.7
+  carbs: 70.4
+  sugars: 16.8
+  protein: 8.9
+- name:
+    en: Multigrain flakes junior
+    pl: Wielozbożone płatki junior
+  producer: Granex
+  unit: g
+  energy: 328
+  fat: 3.1
+  carbs: 58.7
+  sugars: 1.9
+  protein: 9.4
+- name:
+    en: Corn flakes bio
+    pl: Bio płatki kukurydziane
+  producer: Carrefour
+  unit: g
+  energy: 375
+  fat: 1
+  carbs: 81
+  sugars: 3.8
+  protein: 8.5
+- name:
+    en: Bran flakes
+    pl: Płatki z otrębów
+  producer: Radix-Bis
+  unit: g
+  energy: 363
+  fat: 2.5
+  carbs: 66
+  sugars: 6.6
+  protein: 12
+- name:
+    en: Brown rice
+    pl: Ryż naturalny
+  unit: g
+  energy: 345
+  fat: 3
+  carbs: 72
+  sugars: 0.85
+  protein: 8
+- name:
+    en: Jasmine rice
+    pl: Ryż jaśminowy
+  producer: Kupiec
+  unit: g
+  energy: 354
+  fat: 0.7
+  carbs: 78.9
+  sugars: 0.2
+  protein: 6.7
+- name:
+    en: Bulgur groats
+    pl: Kasza bulgur
+  unit: g
+  energy: 330
+  fat: 1.5
+  carbs: 62
+  sugars: 0.8
+  protein: 13
+- name:
+    en: Buckwheat
+    pl: Kasza gryczana
+  unit: g
+  energy: 340
+  fat: 2.8
+  carbs: 64.5
+  sugars: 1.1
+  protein: 11.7
+- name:
+    en: Spelt groats
+    pl: Kasza orkiszowa
+  unit: g
+  energy: 339
+  fat: 2.6
+  carbs: 63
+  sugars: 3.7
+  protein: 11
+- name:
+    en: Shirataki pasta
+    pl: Makaron Shirataki
+  unit: g
+  energy: 8
+  fat: 0.1
+  carbs: 1.1
+  sugars: 0.1
+  protein: 0.3
+- name:
+    en: Banana chips unsweetened
+    pl: Chipsy bananowe niesłodzone
+  unit: g
+  energy: 548
+  fat: 27
+  carbs: 63
+  sugars: 10
+  protein: 3.3
+- name:
+    en: Fresh pineapple
+    pl: Ananas świeży
+  unit: g
+  energy: 50
+  fat: 0.1
+  carbs: 13.1
+  sugars: 9.9
+  protein: 0.5
+- name:
+    en: Boiled potato
+    pl: Ugotowane ziemniaki
+  unit: g
+  energy: 77
+  fat: 0.1
+  carbs: 18.3
+  sugars: 0.5
+  protein: 1.9
+- name:
+    en: Potato
+    pl: Ziemniaki
+  unit: g
+  energy: 77
+  fat: 0.1
+  carbs: 18.3
+  sugars: 0.5
+  protein: 1.9
+- name:
+    en: Sweet potato
+    pl: Słodkie ziemniaki
+  unit: g
+  energy: 86
+  fat: 0.1
+  carbs: 20.1
+  sugars: 4.2
+  protein: 1.6
+- name:
+    en: Rye bread
+    pl: Chleb żytni
+  producer: Wasa
+  unit: g
+  energy: 330
+  fat: 2
+  carbs: 57
+  sugars: 9.3
+  protein: 11
+- name:
+    en: Rye bread light
+    pl: Chleb żytki lekki
+  producer: Wasa
+  unit: g
+  energy: 357
+  fat: 2
+  carbs: 67.2
+  sugars: 6
+  protein: 10.8
+- name:
+    en: Multigrain bread
+    pl: Chleb wieloziarnisty
+  producer: Wasa
+  unit: g
+  energy: 346
+  fat: 4
+  carbs: 56.5
+  sugars: 1.5
+  protein: 10
+- name:
+    en: Kefir
+    pl: Kefir
+  producer: Koscian
+  unit: ml
+  energy: 52
+  fat: 1.5
+  carbs: 5.7
+  sugars: 5.7
+  protein: 3.9
+- name:
+    en: Kefir Warlubski
+    pl: Kefir Warlubski
+  producer: Jagr
+  unit: ml
+  energy: 51
+  fat: 1.5
+  carbs: 6.7
+  sugars: 6.7
+  protein: 2.7
+- name:
+    en: Millet flakes
+    pl: Płatki jaglane
+  unit: g
+  energy: 363
+  fat: 3.9
+  carbs: 69
+  sugars: 1.6
+  protein: 11
+- name:
+    en: Millet groats
+    pl: Kasza jaglana
+  unit: g
+  energy: 346
+  fat: 2.9
+  carbs: 71.6
+  sugars: 0.1
+  protein: 10.5
+- name:
+    en: Tahini
+    pl: Tahini
+  unit: g
+  energy: 695
+  fat: 61
+  carbs: 2.6
+  sugars: 2.4
+  protein: 25
+- name:
+    en: Fava
+    pl: Bób
+  unit: g
+  energy: 88
+  fat: 0.7
+  carbs: 17.6
+  sugars: 9.2
+  protein: 7.9
+- name:
+    en: Buttermilk 1.5%
+    pl: Maślanka 1,5%
+  unit: ml
+  energy: 48
+  fat: 1.5
+  carbs: 5
+  sugars: 5
+  protein: 3.5
+- name:
+    en: Lentils
+    pl: Soczewica
+  unit: g
+  energy: 115
+  fat: 0.45
+  carbs: 20.4
+  sugars: 1.95
+  protein: 4.9
+- name:
+    en: Raspberries
+    pl: Maliny
+  unit: g
+  energy: 52
+  fat: 0.7
+  carbs: 11.9
+  sugars: 4.4
+  protein: 1.2
+- name:
+    en: Boiled egg
+    pl: Ugotowane jajko
+  unit: g
+  energy: 155
+  fat: 10.6
+  carbs: 1.1
+  sugars: 1.1
+  protein: 12.6
+- name:
+    en: Rice cakes
+    pl: Wafle ryżowe
+  unit: g
+  energy: 387
+  fat: 4.1
+  carbs: 72.5
+  sugars: 0.5
+  protein: 10.2
+- name:
+    en: Buckwheat flakes
+    pl: Płatki gryczane
+  unit: g
+  energy: 336
+  fat: 43.1
+  carbs: 69.3
+  sugars: 0.7
+  protein: 12.6
+- name:
+    en: Pork wiener
+    pl: Parówki wieprzowe
+  producer: Tarczynski
+  unit: g
+  energy: 310
+  fat: 27
+  carbs: 3.4
+  sugars: 1.6
+  protein: 13
+- name:
+    en: Pork wiener
+    pl: Parówki wieprzowe
+  producer: Pikok
+  unit: g
+  energy: 277
+  fat: 24
+  carbs: 1.2
+  sugars: 1
+  protein: 14
+- name:
+    en: Milk 2%
+    pl: Mleko 2%
+  producer: Piatnica
+  unit: ml
+  energy: 42
+  fat: 2
+  carbs: 2.6
+  sugars: 2.6
+  protein: 3.5
+- name:
+    en: Hell mustard
+    pl: Musztarda piekielna
+  producer: Pegaz
+  unit: g
+  energy: 188
+  fat: 11
+  carbs: 13
+  sugars: 6
+  protein: 2.2
+- name:
+    en: Peanut butter
+    pl: Masło orzechowe
+  producer: Primavika
+  energy: 609
+  fat: 49
+  carbs: 16
+  sugars: 4
+  protein: 26
+- name:
+    en: Bean shoots
+    pl: Kiełki fasoli
+  producer: Bonduelle
+  unit: f
+  energy: 17
+  fat: 0.1
+  carbs: 2.4
+  sugars: 2
+  protein: 1
+- name:
+    en: Tofu
+    pl: Tofu
+  producer: Polsoja
+  unit: g
+  energy: 120
+  fat: 6.8
+  carbs: 0.2
+  sugars: 0.2
+  protein: 13.8
+- name:
+    en: Tofu natural
+    pl: Tofu naturalne
+  producer: NaturAvena
+  unit: g
+  energy: 100
+  fat: 3.8
+  carbs: 4.4
+  sugars: 2.2
+  protein: 12
+- name:
+    en: Tofu natural
+    pl: Tofu naturalne
+  producer: Lidl
+  unit: g
+  energy: 130
+  fat: 8.5
+  carbs: 0.5
+  sugars: 0.5
+  protein: 12.3
+- name:
+    en: Pate mexican
+    pl: Pasztet meksykański
+  producer: Primavika
+  unit: g
+  energy: 152
+  fat: 5.4
+  carbs: 21
+  sugars: 3.3
+  protein: 4.8
+- name:
+    en: Coconut protein
+    pl: Białko kokosa
+  producer: Bene Vobis
+  unit: g
+  energy: 359
+  fat: 13.5
+  carbs: 22.6
+  sugars: 19.5
+  protein: 19.2
+- name:
+    en: Orange
+    pl: Pomarańcza
+  unit: g
+  energy: 47
+  fat: 0.1
+  carbs: 12
+  sugars: 9
+  protein: 0.9
+- name:
+    en: Apricot
+    pl: Morela
+  unit: g
+  energy: 48
+  fat: 0.4
+  carbs: 11
+  sugars: 9
+  protein: 1.4
+- name:
+    en: Blueberries
+    pl: Jagody
+  unit: g
+  energy: 57
+  fat: 0.3
+  carbs: 14
+  sugars: 10
+  protein: 0.7
+- name:
+    en: Pear
+    pl: Gruszka
+  unit: g
+  energy: 58
+  fat: 0.12
+  carbs: 15.46
+  sugars: 9.8
+  protein: 0.38
+- name:
+    en: Grapefruit
+    pl: Grejpfrut
+  unit: g
+  energy: 32
+  fat: 0.1
+  carbs: 8.08
+  sugars: 6.98
+  protein: 0.63
+- name:
+    en: Grapes
+    pl: Winogrono
+  unit: g
+  energy: 69
+  fat: 0.16
+  carbs: 18.1
+  sugars: 15.48
+  protein: 0.72
+- name:
+    en: Kiwifruit
+    pl: Kiwi
+  unit: g
+  energy: 61
+  fat: 0.52
+  carbs: 14.66
+  sugars: 8.99
+  protein: 1.14
+- name:
+    en: Mango
+    pl: Mango
+  unit: g
+  energy: 65
+  fat: 0.27
+  carbs: 17
+  sugars: 14.8
+  protein: 0.51
+- name:
+    en: Pomegranate
+    pl: Granat
+  unit: g
+  energy: 52
+  fat: 0.2
+  carbs: 14
+  sugars: 10
+  protein: 0.3
+- name:
+    en: Watermelon
+    pl: Arbuz
+  unit: g
+  energy: 30
+  fat: 0.15
+  carbs: 7.55
+  sugars: 6.2
+  protein: 0.61
+- name:
+    en: Cantaloupe melon
+    pl: Melon żółty
+  unit: g
+  energy: 52
+  fat: 0.2
+  carbs: 14
+  sugars: 10
+  protein: 0.3
+- name:
+    en: Apple
+    pl: Jabłko
+  unit: g
+  energy: 52
+  fat: 0.2
+  carbs: 14
+  sugars: 10
+  protein: 0.3
+- name:
+    en: Banana
+    pl: Banan
+  unit: g
+  energy: 89
+  fat: 0.33
+  carbs: 22.84
+  sugars: 12.32
+  protein: 1.09
+- name:
+    en: Strawberries
+    pl: Truskawki
+  unit: g
+  energy: 32
+  fat: 0.3
+  carbs: 7.68
+  sugars: 4.66
+  protein: 0.67
+- name:
+    en: Tomato
+    pl: Pomidor
+  unit: g
+  energy: 18
+  fat: 0.2
+  carbs: 3.92
+  sugars: 2.63
+  protein: 0.88
+- name:
+    en: Lettuce
+    pl: Sałata
+  unit: g
+  energy: 14
+  fat: 0.14
+  carbs: 2.97
+  sugars: 1.76
+  protein: 0.9
+- name:
+    en: Carrot
+    pl: Marchew
+  unit: g
+  energy: 41
+  fat: 0.24
+  carbs: 9.58
+  sugars: 4.54
+  protein: 0.93
+- name:
+    en: Asparagus
+    pl: Szparagi
+  unit: g
+  energy: 27
+  fat: 0.16
+  carbs: 5.2
+  sugars: 2.52
+  protein: 2.95
+- name:
+    en: Cabbage
+    pl: Kapusta
+  unit: g
+  energy: 20
+  fat: 0.12
+  carbs: 3.88
+  sugars: 1.88
+  protein: 2.2
+- name:
+    en: Cauliflower
+    pl: Kalafior
+  unit: g
+  energy: 25
+  fat: 0.1
+  carbs: 5.3
+  sugars: 2.4
+  protein: 1.98
+- name:
+    en: Green beans
+    pl: Fasolka szparagowa
+  unit: g
+  energy: 31
+  fat: 0.12
+  carbs: 7.13
+  sugars: 1.4
+  protein: 1.82
+- name:
+    en: Spinach
+    pl: Szpinak
+  unit: g
+  energy: 23
+  fat: 0.39
+  carbs: 3.63
+  sugars: 0.42
+  protein: 2.86
+- name:
+    en: Avocado
+    pl: Awokado
+  unit: g
+  energy: 160
+  fat: 14.66
+  carbs: 8.53
+  sugars: 0.66
+  protein: 2
+- name:
+    en: Mushrooms
+    pl: Pieczarki
+  unit: g
+  energy: 22
+  fat: 0.34
+  carbs: 3.28
+  sugars: 1.65
+  protein: 3.09
+- name:
+    en: Onion
+    pl: Cebula
+  unit: g
+  energy: 42
+  fat: 0.08
+  carbs: 10.11
+  sugars: 4.28
+  protein: 0.92
+- name:
+    en: Eggplant
+    pl: Bakłażan
+  unit: g
+  energy: 24
+  fat: 0.19
+  carbs: 5.7
+  sugars: 2.35
+  protein: 1.01
+- name:
+    en: Broccoli
+    pl: Brokuły
+  unit: g
+  energy: 34
+  fat: 0.37
+  carbs: 6.64
+  sugars: 1.7
+  protein: 2.82
+- name:
+    en: Brussels sprouts
+    pl: Brukselka
+  unit: g
+  energy: 43
+  fat: 0.3
+  carbs: 8.95
+  sugars: 2.2
+  protein: 3.38
+- name:
+    en: Couscous
+    pl: Kuskus
+  unit: g
+  energy: 361
+  fat: 1
+  carbs: 75
+  sugars: 0.6
+  protein: 13
+- name:
+    en: Xylitol
+    pl: Ksylitol
+  unit: g
+  energy: 240
+  fat: 0
+  carbs: 99.8
+  sugars: 0.2
+  protein: 0
+- name:
+    en: Peanuts
+    pl: Fistaszki
+  unit: g
+  energy: 610
+  fat: 48
+  carbs: 14.4
+  sugars: 28.03
+  protein: 26.6
+- name:
+    en: Chieve
+    pl: Szczypior
+  unit: g
+  energy: 30
+  fat: 0.7
+  carbs: 4.4
+  sugars: 1.9
+  protein: 3.3
+- name:
+    en: Chicken ham
+    pl: Szynka z kurczaka
+  unit: g
+  energy: 123
+  fat: 5.6
+  carbs: 0
+  sugars: 0
+  protein: 18.2
+- name:
+    en: Rice drink
+    pl: Napój ryżowy
+  producer: Pilos
+  unit: g
+  energy: 59
+  fat: 0.9
+  carbs: 12.2
+  sugars: 8
+  protein: 0.2

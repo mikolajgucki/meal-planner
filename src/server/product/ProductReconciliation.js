@@ -28,8 +28,17 @@ class ProductReconciliation {
             }
         }
 
-    // changed produces
-        // for ()
+    // changed products
+        for (const oldProduct of oldProducts) {
+            const newProduct = Product.findByFullName(
+                newProducts,oldProduct.fullName);
+            if (newProduct && !Product.equal(oldProduct,newProduct)) {
+                if (!changes.changed) {
+                    changes.changed = [];
+                }
+                changes.changed.push(newProduct);
+            }
+        }
 
         return changes;
     }

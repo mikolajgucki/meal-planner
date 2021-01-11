@@ -1,0 +1,37 @@
+$item-selector-border-size: 1px;
+
+.item-selector {
+    width: 100%;
+
+    .item-selector-fields {
+        position: relative;
+        z-index: 1;
+    }
+
+    .text-field {
+        width: 100%;
+        z-index: 1;
+    }
+
+    .item-selector-items {
+        border: $item-selector-border-size solid $light-gray;
+        border-radius: 0.25rem;
+        position: absolute;
+        background: white;
+        top: 2.125rem;
+        width: calc(100% - 2 * #{$item-selector-border-size});
+    }
+
+    .item-selector-mask {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+    }
+
+    .item-selector-mask-hidden {
+        display: none;
+    }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 /** */
-const productNameLangs = ['en','pl'];
+const NAME_LANGS = ['en','pl'];
 
 /** */
 function renderMatchedName(name,indexes,searchValue) {
@@ -56,30 +56,32 @@ function renderMatchedName(name,indexes,searchValue) {
 }
 
 /** */
-function renderProductName(product) {
+function renderItemName(itemMatch) {
     const name = [];
 
-    for (const lang of productNameLangs) {
+    for (const lang of NAME_LANGS) {
         const separator = name.length > 0 ? ' / ' : '';
-        const match = product.matches.find((match) => {
+        const match = itemMatch.matches.find((match) => {
             return match.lang === lang;
         });
         const indexes = match ? match.indexes: null;
         name.push(<span>{separator}</span>);
         name.push(renderMatchedName(
-            product.name[lang],indexes,product.searchValue));
+            itemMatch.name[lang],indexes,itemMatch.searchValue));
     }
 
-    name.push(
-        <span className="product-selector-item-energy">
-            {' / ' + product.energyPer100 + 'kcal'}
-        </span>
-    );
+    if (itemMatch.details) {
+        name.push(
+            <span className="item-selector-item-details">
+                {' / ' + itemMatch.details}
+            </span>
+        );
+    }
     return name;
 }
 
 /** */
-export default class ProductSelectorItem extends React.Component {
+export default class ItemSelectorEntry extends React.Component {
     /** */
     constructor(props) {
         super(props);
@@ -103,15 +105,15 @@ export default class ProductSelectorItem extends React.Component {
 
     /** */
     render() {
-        const productClassNames = classNames(
-            'product-selector-item',
-            { 'product-selector-item-selected': this.props.selected });
+        const itemClassNames = classNames(
+            'item-selector-item',
+            { 'item-selector-item-selected': this.props.selected });
         return (
-            <div className={productClassNames}
+            <div className={itemClassNames}
                 onClick={this.onClick}
                 onMouseEnter={this.onMouseEnter}>
-                <div className="product-selector-item-name">
-                    {renderProductName(this.props.productMatch)}
+                <div className="item-selector-item-name">
+                    {renderItemName(this.props.itemMatch)}
                 </div>
             </div>
         );

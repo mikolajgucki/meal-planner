@@ -1,7 +1,4 @@
 {
-    "db": {
-        "products": "db/products.json"
-    },
     "http": {
         "port": 8080
     }

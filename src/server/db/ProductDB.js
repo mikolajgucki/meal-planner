@@ -5,15 +5,15 @@ const ProductReconciliation = require('../product/ProductReconciliation');
 const AbstractDB = require('./AbstractDB');
 
 /** */
-const productNameLangs = ['en','pl'];
+const NAME_LANGS = ['en','pl'];
 
 /** */
-const per100Properties = ['energy','carbs','sugars','fat','protein'];
+const PER_100_PROPERTIES = ['energy','carbs','sugars','fat','protein'];
 
 /** */
 function getFullName(product) {
     let name = '';
-    for (const lang of productNameLangs) {
+    for (const lang of NAME_LANGS) {
         if (product.name[lang]) {
             if (name.length > 0) {
                 name += ' / ';
@@ -27,12 +27,11 @@ function getFullName(product) {
     return name;
 }
 
-
 /** */
 function mapProducts(products) {
     for (const product of products) {
         product.fullName = getFullName(product);
-        for (const property of per100Properties) {
+        for (const property of PER_100_PROPERTIES) {
             product[`${property}Per100`] = product[`${property}`];
             delete product[`${property}`];
         }
@@ -45,42 +44,10 @@ function mapProducts(products) {
 }
 
 /** */
-function getDuplicatedName(product0,product1) {
-    const names0 = Product.getNames(product0);
-    const names1 = Product.getNames(product1);
-
-    for (const name0 of names0) {
-        for (const name1 of names1) {
-            if (name0 === name1) {
-                return name0;
-            }
-        }
-    }
-}
-
-/** */
-function validateData(data) {
-// must be an array
-    if (!Array.isArray(data)) {
-        throw new Error(`Products data is not an array`);
-    }
-
-// find duplicates
-    for (let i0 = 0; i0 < data.length - 1; i0++) {
-        for (let i1 = i0 + 1; i1 < data.length; i1++) {
-            const duplicatedName = getDuplicatedName(data[i0],data[i1]);
-            if (duplicatedName) {
-                throw new Error(`Duplicated product ${duplicatedName}`);
-            }
-        }
-    }
-}
-
-/** */
 class ProductDB extends AbstractDB {
     /** */
     constructor() {
-        super('products.json');
+        super('products.yml');
         this.watch();
     }
 
@@ -103,7 +70,8 @@ class ProductDB extends AbstractDB {
 
     /** */
     validate(data) {
-        validateData(data);
+        this.validateArray(data);
+        this.validateNoDuplicatedNames(data,Product.getNames);
     }
 
     /** */
@@ -112,10 +80,22 @@ class ProductDB extends AbstractDB {
         if (oldProducts && this.changeListener) {
             const changes = ProductReconciliation.reconcile(
                 oldProducts,this.findAll());
-            if (changes.added || changes.removed) {
+            if (changes.added || changes.removed || changes.changed) {
                 this.changeListener(changes);
             }
         }
+    }
+
+    /** */
+    findByName(name) {
+        return this.data.find(product => {
+            for (const lang in product.name) {
+                if (product.name[lang] === name) {
+                    return true;
+                }
+            }
+            return false;
+        })
     }
 }
 

@@ -19,6 +19,7 @@ export default class TextField extends React.Component {
         this.onChange = this.onChange.bind(this);
         this.onKeyDown = this.onKeyDown.bind(this);
         this.onKeyPress = this.onKeyPress.bind(this);
+        this.onFocus = this.onFocus.bind(this);
         this.onBlur = this.onBlur.bind(this);
     }
 
@@ -36,6 +37,11 @@ export default class TextField extends React.Component {
     }
 
     /** */
+    getValue() {
+        return this.state.value;
+    }
+
+    /** */
     setValue(value) {
         this.setState((prevState) => ({
             ...prevState,
@@ -46,6 +52,11 @@ export default class TextField extends React.Component {
     /** */
     focus() {
         this.inputRef.current.focus();
+    }
+
+    /** */
+    blur() {
+        this.inputRef.current.blur();
     }
 
     /** */
@@ -83,6 +94,13 @@ export default class TextField extends React.Component {
     }
 
     /** */
+    onFocus(event) {
+        if (this.props.onFocus) {
+            this.props.onFocus(event);
+        }
+    }
+
+    /** */
     onBlur(event) {
         if (this.props.onBlur) {
             this.props.onBlur(event);
@@ -112,6 +130,7 @@ export default class TextField extends React.Component {
                     onChange={this.onChange}
                     onKeyDown={this.onKeyDown}
                     onKeyPress={this.onKeyPress}
+                    onFocus={this.onFocus}
                     onBlur={this.onBlur}/>
             </div>
         );

@@ -14,7 +14,6 @@ function nextId() {
 export default class MessagesService {
     /** */
     static addMessage(text,messageType = MessageTypes.INFO) {
-        console.log('text',text);
         StateService.dispatch(actions.addMessage(nextId(),text,messageType));
     }
 

@@ -12,15 +12,17 @@
     }
 
     .meal-select-product {
-        justify-self: flex-end;
-        align-self: center;
-        width: 1rem;
-        height: 1rem;
-        display: none;
+        font-size: 0.875rem;
+        cursor: pointer;
+        padding-right: 0.25rem;
+        color: $blue;
+        flex-grow: 0;
+        flex-shrink: 1;
+        visibility: hidden;
     }
 
     .meal-select-product-mobile {
-        display: inline;
+        visibility: visible;
     }
 
     .meal-areas {
@@ -37,6 +39,11 @@
     .meal-calculation {
         width: 100%;
         flex-grow: 1;
+        padding-left: 0.5rem;
+    }
+
+    .meal-calculation-no-error {
+        margin-top: 1rem;
     }
 }
 
@@ -53,5 +60,9 @@
         .meal-calculation {
             margin-left: 0.5rem;
         }
+
+        .meal-calculation-no-error {
+            margin-top: 0;
+        }    
     }
 }

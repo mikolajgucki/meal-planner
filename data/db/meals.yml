@@ -1,0 +1,21 @@
+- name:
+    en: Porridge with walnuts
+    pl: Owsianka z orzechami włoskimi
+  time: breakfast
+  energy: 400
+  ingredients:
+    - Rolled oats 40
+    - Walnuts 20
+    - Raisins 25
+    - Rice drink [Pilos] 1x
+
+- name:
+    en: Porridge with hazelnuts
+    pl: Owsianka z orzechami laskowymi
+  time: breakfast
+  energy: 400
+  ingredients:
+    - Rolled oats 40
+    - Hazelnuts 20
+    - Raisins 25
+    - Rice drink [Pilos] 1x

@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 const expect = require('chai').expect;
-const IngredientsParser = require('../src/app/meal/IngredientsParser');
+const IngredientsParser = require('../src/common/meal/IngredientsParser');
 
 /** */
 function expectToThrowIngredientsError(expr,msg,lineNo) {

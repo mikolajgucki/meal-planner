@@ -1,11 +1,24 @@
 .section {
-    $section-left-padding: 1rem;
+    $section-horizontal-padding: 1rem;
 
-    .section-title {
-        width: calc(100% - #{$section-left-padding});
-        padding-left: $section-left-padding;
+    .section-header {
+        display: flex;
+        align-items: flex-end;
         margin-top: 1rem;
         border-bottom: 1px solid $light-gray;
+        padding-left: $section-horizontal-padding;
+        padding-right: $section-horizontal-padding;
+    }
+
+    .section-title {
+        flex-grow: 1;
+    }
+
+    .section-menu {
+        flex-grow: 0;
+        text-decoration: none;
+        color: $blue;
+        font-size: 0.875rem;
     }
 
     .section-content {

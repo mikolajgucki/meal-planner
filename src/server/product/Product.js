@@ -1,6 +1,16 @@
 'use strict';
 
 /** */
+const FIELDS_TO_COMPARE = [
+    'unit',
+    'energyPer100',
+    'fatPer100',
+    'carbsPer100',
+    'sugarsPer100',
+    'proteinPer100'
+];
+
+/** */
 class Product {
     /** */
     static getNames(product) {
@@ -31,8 +41,18 @@ class Product {
     }
 
     /** */
-    static compare(productA,productB) {
-        
+    static findByFullName(products,fullName) {
+        return products.find(product => product.fullName === fullName);
+    }
+
+    /** */
+    static equal(productA,productB) {
+        for (const field of FIELDS_TO_COMPARE) {
+            if (productA[field] !== productB[field]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
 

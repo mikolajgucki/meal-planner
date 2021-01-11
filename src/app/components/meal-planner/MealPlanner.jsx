@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import Products from '../../db/Products';
-import IngredientsParser from '../../meal/IngredientsParser';
+import IngredientsParser from '../../../common/meal/IngredientsParser';
+import ProductsDB from '../../db/ProductsDB';
 import MealCalculator from '../../meal/MealCalculator';
 import BrowserService from '../../services/browser/BrowserService';
 import MealEnergy from './MealEnergy';
@@ -11,16 +11,30 @@ import MealCalculationArea from './MealCalculationArea';
 /** */
 const translations = {
     'ingredients': 'Ingredients:',
-    'enter.energy': 'Enter energy'
+    'enter.energy': 'Enter energy',
+    'pick': 'Pick'
 }
 
 /** */
 function setError(self,msg) {
     self.mealCalculationAreaRef.current.setError(msg);
+    self.setState((prevState) => ({
+        ...prevState,
+        hasError: true
+    }));
 }
 
 /** */
-export default class Meal extends React.Component {
+function clearError(self) {
+    self.mealCalculationAreaRef.current.clearError();
+    self.setState((prevState) => ({
+        ...prevState,
+        hasError: false
+    }));
+}
+
+/** */
+export default class MealPlanner extends React.Component {
     /** */
     constructor(props) {
         super(props);
@@ -48,6 +62,7 @@ export default class Meal extends React.Component {
             ...prevState,
             energy: energy
         }));
+        this.calculateMeal(energy,this.state.ingredientsStr);
     }
 
     /** */
@@ -59,7 +74,7 @@ export default class Meal extends React.Component {
 
     /** */
     onSelectProduct() {
-        this.mealIngredientsAreaRef.current.showProductSelector();
+        this.mealIngredientsAreaRef.current.showItemSelector();
     }
 
     /** */
@@ -68,40 +83,31 @@ export default class Meal extends React.Component {
             ...prevState,
             ingredientsStr
         }));
+        this.calculateMeal(this.state.energy,ingredientsStr);
     }
 
     /** */
-    componentDidMount() {
-        this.mealEnergyRef.current.focus();
-    }
-
-    /** */
-    componentDidUpdate() {
-        if (!this.state.energy) {
+    calculateMeal(energy,ingredientsStr) {
+        if (!energy) {
             setError(this,this.translate('enter.energy'));
             return;
         }
-        this.mealCalculationAreaRef.current.clearError();
+        clearError(this);
 
-        if (this.state.energy && this.state.ingredientsStr) {
+        if (energy && ingredientsStr) {
             let ingredients;
             try {
-                ingredients = IngredientsParser.parse(
-                    this.state.ingredientsStr);
+                ingredients = IngredientsParser.parse(ingredientsStr);
             } catch (error) {
-                if (!error.lineNo) {
-                    console.error(error);
-                }
                 setError(this,error.msg + ` in line ${error.lineNo}`);
                 return;
             }
             if (ingredients.length > 0) {
                 try {
-                    const meal = MealCalculator.calc(Products.get(),
-                        ingredients,this.state.energy);
+                    const meal = MealCalculator.calc(
+                        ProductsDB.get(),ingredients,energy);
                     this.mealCalculationAreaRef.current.setMeal(meal);
                 } catch (error) {
-                    console.error(error);
                     setError(this,error.message);
                     return;
                 }
@@ -110,11 +116,18 @@ export default class Meal extends React.Component {
     }
 
     /** */
+    componentDidMount() {
+        this.mealEnergyRef.current.focus();
+    }
+
+    /** */
     render() {
         const selectProductClassNames = classNames('meal-select-product',
             {'meal-select-product-mobile': BrowserService.isMobile()});
+        const mealCalculationClassNames = classNames('meal-calculation',
+            {'meal-calculation-no-error': !this.state.hasError});
         return (
-            <div class="meal">
+            <div className="meal">
                 <div className="meal-energy">
                     <MealEnergy ref={this.mealEnergyRef}
                         onEnergyChange={this.onEnergyChange}
@@ -124,18 +137,18 @@ export default class Meal extends React.Component {
                     <div className="meal-header-label">
                         {this.translate('ingredients')}
                     </div>
-                    <img className={selectProductClassNames}
-                        src="img/select.png"
+                    <div className={selectProductClassNames}
                         onClick={this.onSelectProduct}>
-                    </img>
+                        {this.translate('pick')}
+                    </div>
                 </div>
-                <div class="meal-areas">
-                    <div class="meal-ingredients">
+                <div className="meal-areas">
+                    <div className="meal-ingredients">
                         <MealIngredientsArea
                             ref={this.mealIngredientsAreaRef}
                             onIngredientsChange={this.onIngredientsChange}/>
                     </div>
-                    <div class="meal-calculation">
+                    <div className={mealCalculationClassNames}>
                         <MealCalculationArea ref={this.mealCalculationAreaRef}/>
                     </div>
                 </div>

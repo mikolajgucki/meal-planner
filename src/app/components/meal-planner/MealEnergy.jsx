@@ -1,5 +1,5 @@
 import React from 'react';
-import { parseInteger } from '../../util/util';
+import { parseInteger } from '../../../common/util/util';
 import TextField from '../TextField';
 
 /** */

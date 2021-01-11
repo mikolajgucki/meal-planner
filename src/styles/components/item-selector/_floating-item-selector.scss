@@ -1,8 +1,8 @@
-.floating-product-selector {
+.floating-item-selector {
     $padding: 0.5rem;
     $left: 0.5rem;
 
-    .product-selector-box {
+    .item-selector-box {
         position: fixed;
         top: 0.5rem;
         left: $left;
@@ -18,7 +18,7 @@
         width: calc(100% - 2 * #{$input-padding} - 2 * #{$input-border-size});
     }
 
-    .floating-product-selector-mask {
+    .floating-item-selector-mask {
         position: fixed;
         top: 0;
         left: 0;
@@ -29,19 +29,19 @@
     }
 
     @include desktop() {
-        .product-selector-box {
+        .item-selector-box {
             position: absolute;
-            width: calc(100% - 2 * #{$padding} - 2 * #{$product-selector-border-size});
+            width: calc(100% - 2 * #{$padding} - 2 * #{$item-selector-border-size});
             top: unset;
             left: unset;
         }
 
-        .floating-product-selector-mask {
+        .floating-item-selector-mask {
             opacity: 0;
         }
     }
 }
 
-.floating-product-selector-hidden {
+.floating-item-selector-hidden {
     display: none;
 }

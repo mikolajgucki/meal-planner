@@ -1,25 +1,41 @@
 .message {
-    $message-horizontal-padding: 1rem;
+    $message-left-padding: 0.25rem;
+    $message-right-padding: 0.25rem;
+    $message-close-image-width: 2rem;
 
-    width: calc(100% - 2 * #{$message-horizontal-padding});
+    width: calc(100% -
+        #{$message-left-padding} -
+        #{$message-right-padding});
     border-radius: 0.25rem;
-    padding: 0.25rem $message-horizontal-padding;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: $message-left-padding;
+    padding-right: $message-right-padding;
     margin-bottom: 0.25rem;
     display: flex;
     align-items: center;
 
     .message-close-image {
+        padding-right: 0.5rem;
         flex-grow: 0;
-        flex-shrink: 1;
+        flex-shrink: 0;
         width: 1rem;
         height: 1rem;
-        cursor: pointer;
         opacity: 0.5;
+        cursor: pointer;
     }
 
     .message-text {
         flex-grow: 1;
         flex-shrink: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        cursor: pointer;
+        width: calc(100% -
+            #{$message-left-padding} -
+            #{$message-right-padding} -
+            #{$message-close-image-width});
     }
 }
 

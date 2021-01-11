@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const { compareIgnoreCase } = require('../util/util');
+const { compareIgnoreCase } = require('../../common/util/util');
 
 /** */
 function findProduct(products,name) {

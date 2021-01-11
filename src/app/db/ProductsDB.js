@@ -1,19 +1,12 @@
 import _ from 'lodash';
-import { diacriticsToLatin, indexesOfIgnoreCase } from '../util/util';
+import { diacriticsToLatin, indexesOfIgnoreCase } from '../../common/util/util';
 import Frontend from '../frontend/Frontend';
 
 /** */
-function matchByName(productName,name) {
-// return a.toLowerCase().indexOf(b.toLowerCase()) !== -1;
-    const matches = [];
-    return matches;
-}
-
-/** */
-export default class Products {
+export default class ProductsDB {
     /** */
     static init() {
-        return Products.fetch();
+        return ProductsDB.fetch();
     }
 
     /** */
@@ -21,7 +14,7 @@ export default class Products {
         return new Promise((resolve,reject) => {
             Frontend.get('/products')
                 .then((response) => {
-                    Products.products = response.data;
+                    ProductsDB.products = response.data;
                     resolve();
                 })
                 .catch((error) => {
@@ -32,13 +25,13 @@ export default class Products {
 
     /** */
     static get() {
-        return Products.products;
+        return ProductsDB.products;
     }
 
     /** */
     static matchByName(searchValue) {
         const matches = [];
-        for (const product of Products.products) {
+        for (const product of ProductsDB.products) {
             let match;
             for (const lang in product.name) {
                 const productName = product.name[lang];

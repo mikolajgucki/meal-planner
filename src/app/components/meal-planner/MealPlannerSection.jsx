@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '../Section';
-import Meal from './Meal';
+import MealPlanner from './MealPlanner';
 
 /** */
 const translations = {
@@ -8,7 +8,7 @@ const translations = {
 }
 
 /** */
-export default class MealSection extends React.Component {
+export default class MealPlannerSection extends React.Component {
     /** */
     translate(key) {
         return translations[key] ? translations[key] : key;
@@ -18,7 +18,7 @@ export default class MealSection extends React.Component {
     render() {
         return (
             <Section title={this.translate('section.title')}>
-                <Meal/>
+                <MealPlanner/>
             </Section>
         );
     }

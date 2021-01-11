@@ -6,12 +6,14 @@ const express = require('express');
 const Cfg = require('../cfg/Cfg');
 const Log = require('../log/Log');
 const ProductRoutes = require('./ProductRoutes');
+const MealRoutes = require('./MealRoutes');
 
 /** */
 class HTTPServer {
     /** */
     static addRoutes() {
         ProductRoutes.addRoutes(HTTPServer.app);
+        MealRoutes.addRoutes(HTTPServer.app);
     }
 
     /** */
